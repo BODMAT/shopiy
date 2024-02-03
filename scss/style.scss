@@ -389,7 +389,6 @@ body {
 
     &__form {
         margin-bottom: 22px;
-        max-width: 100%;
     }
 
     &__ticks {
@@ -537,7 +536,7 @@ body {
     & * {
         margin-bottom: 0;
     }
-    @media (max-width: 389.98px) {
+    @media (max-width: 419.98px) {
         flex-wrap: wrap;
         padding: 10px 12px 10px;
     }
@@ -556,11 +555,14 @@ body {
         &::placeholder {
             color:#626276;
         }
+        @media (max-width: 419.98px) {
+            flex: 1 1 auto;
+        }
     }
 
     &__button {
-        @media (max-width: 389.98px) {
-            flex: 1 1 100%;
+        @media (max-width: 419.98px) {
+            flex: 1 0 100%;
         }
     }
 }

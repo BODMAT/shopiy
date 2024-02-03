@@ -545,7 +545,6 @@ body {
 
 .about__form {
   margin-bottom: 22px;
-  max-width: 100%;
 }
 
 .about__ticks {
@@ -729,7 +728,7 @@ body {
   margin-bottom: 0;
 }
 
-@media (max-width: 389.98px) {
+@media (max-width: 419.98px) {
   .form-about {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -764,11 +763,19 @@ body {
   color: #626276;
 }
 
-@media (max-width: 389.98px) {
+@media (max-width: 419.98px) {
+  .form-about__mail {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 419.98px) {
   .form-about__button {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
   }
 }
 
