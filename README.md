@@ -1,3 +1,3 @@
 ## SHOPIY
-- Visit [site](https://bodmat.github.io/hobby/)
+- Visit [site](https://bodmat.github.io/shopiy/)
 - Use HTML, CSS (SCSS), JS
