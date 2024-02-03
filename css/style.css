@@ -545,6 +545,7 @@ body {
 
 .about__form {
   margin-bottom: 22px;
+  max-width: 100%;
 }
 
 .about__ticks {
