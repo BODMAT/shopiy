@@ -453,6 +453,9 @@ body {
 }
 
 .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-height: 100vh;
   position: relative;
   padding: 120px 0 80px 0;
