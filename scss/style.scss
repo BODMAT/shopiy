@@ -336,7 +336,11 @@ body {
 .about {
     min-height: 100vh;
     position: relative;
-    padding: 120px 0 100px 0;
+    padding: 120px 0 80px 0;
+    @media (max-width: 567.98px) {
+    padding: 120px 0 125px 0;
+        
+    }
 
     &__container {
         display: flex;
@@ -656,6 +660,8 @@ body {
         height: 42%;
     }
     @media (max-width: 991.98px) {
+        width: 200px;
+        height: 215px;
         right: 0%;
     }
     @media (max-width: 567.98px) {
@@ -711,4 +717,105 @@ body {
         }
     }
 }
+//================================================================================================
 
+.service {
+    padding-bottom: 60px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+        @media (max-width: 799.98px) {
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    &__img {
+        max-width: 645px;
+        flex: 0 1 calc(50%-2.5px);
+        @media (max-width: 799.98px) {
+            flex: 1 1 100%;
+        }
+        
+        & img {
+            max-width: 100%;
+        }
+        
+    }
+
+    &__content {
+        flex: 0 1 calc(50%-2.5px);
+        & > *:not(:last-child){
+            margin-bottom: 20px;
+        }
+        @media (max-width: 799.98px) {
+            flex: 1 1 100%;
+            & >*{
+                margin: 10px auto;
+            }
+        }
+    }
+
+    &__suptitle {
+        max-width: 236px;
+    }
+
+    &__title {
+    }
+
+    &__counter {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__num {
+        font-size: 38px;
+        font-weight: 700;
+        line-height: calc(49 / 38 *100%);
+
+        &_1 {
+            color: #ffbe0b;
+            padding-right: 20px;
+        }
+        &_2 {
+            padding-left: 40px;
+            color: #fb5607;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 80%;
+                bottom: 10%;
+                left: 0;
+                background-color: #868695;
+                @media (max-width: 799.98px) {
+                    display: none;
+                }
+            }
+            @media (max-width: 799.98px) {
+                padding-left: 0px;
+            }
+        }
+        & span {
+            position: relative;
+            left: -5px;
+        }
+
+        &_num {
+            display: inline;
+        }
+
+        &_text {
+            color: #868695;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: calc(25 / 14 *100%);
+            max-width: 200px;
+        }
+    }
+}
