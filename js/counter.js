@@ -6,9 +6,12 @@ function windowLoad() {
     function digitsCountersInit(digitsCountersItems) {
         let digitsCounters = digitsCountersItems ? digitsCountersItems : document.querySelectorAll("[data-digits-counter]");
         if (digitsCounters) {
+            circle.classList.add("_active");
+
             digitsCounters.forEach(digitsCounter => {
                 digitsCountersAnimate(digitsCounter);
             });
+
         }
     }
 
@@ -56,15 +59,25 @@ function windowLoad() {
                 if (digitsCountersItems.length) {
                     digitsCountersInit(digitsCountersItems);
                 }
+            } else {
+                circle.classList.remove("_active");
             }
         });
     }, options);
 
-    let sections = document.querySelectorAll('.service');
-    if (sections.length) {
-        sections.forEach(section => {
+    let sections1 = document.querySelectorAll('.service');
+    let sections2 = document.querySelectorAll('.product');
+    let circle = document.querySelector('.circle');
+
+    if (sections1.length) {
+        sections1.forEach(section => {
             observer.observe(section);
 
+        });
+    }
+    if (sections2.length) {
+        sections2.forEach(section => {
+            observer.observe(section);
         });
     }
 }
