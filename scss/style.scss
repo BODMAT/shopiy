@@ -21,6 +21,10 @@ body {
     background-color: #0e0e2c;
 }
 
+body.lock {
+	overflow: hidden;
+}
+
 .wrapper {
     min-height: 100%;
     overflow: hidden;
@@ -65,6 +69,7 @@ body {
         color: #ffbe0b;
         transform: scale(1.1);
     }
+
     &_first {
         border: 1px solid #ffbe0b;
         background-color: transparent;
@@ -347,6 +352,16 @@ body {
     }
 }
 
+//!Animation===============================================================================================
+.title{
+    transform: translate(0%, 120%);
+    opacity: 0;
+    transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1) 0.1s;
+    &._animation {
+        transform: translate(0, 0);
+        opacity: 1;
+    } 
+}
 //================================================================================================
 .about {
     display: flex;
@@ -1599,4 +1614,147 @@ body {
 
 .menu2__list > li {
     padding: 10px 0;
+}
+
+//!POP-UPS=========================================================================================================
+.popup {
+    position: fixed;
+    z-index: 20;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+
+    &.open {
+        opacity: 1;
+	    visibility: visible;
+        & .popup__content {
+            left: 0;
+            opacity: 1;
+        }
+    }
+
+    &__area {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &__body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+        transition: all 0.8s ease 0s;
+    }
+
+    &__content {
+        position: relative;
+        background-color: #fff;
+        border-radius: 18px;
+        color: #000;
+        max-width: 800px;
+        padding: 30px 40px 30px 30px;
+        position: relative;
+        transition: all 0.8s ease 0s;
+        opacity: 0;
+        left: -100%;
+        @media (max-width: 400.98px) {
+            padding: 20px 20px 20px 17px;
+        }
+    }
+
+    &__close {
+        &:before, &:after {content: ""; position: absolute; right: 10px; top: 18px; width: 20px; height: 2px; background: #000;}
+        &:before {transform: rotate(45deg);}
+        &:after {transform: rotate(-45deg);}
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 150%;
+        text-align: center;
+        color: #0D0D2B;
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__form {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__email, &__password, &__name, &__tel {
+        display: flex;
+        width: 100%;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 175%;
+        letter-spacing: 0.01em;
+        padding: 8px 10px;
+        border-radius: 17px;
+        color: #000;
+        border: 1px solid #828282;
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+        &::placeholder {
+            color: #828282;
+        }
+    }
+
+
+    &__text {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        color: #000;
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 20px;
+    }
+
+    &__button {
+        font-weight: 600;
+        font-size: 16px;
+        &:hover {
+            background-color: transparent;
+            border: 1px solid #000;
+            color: #000;
+            transform: scale(1.1);
+        }
+    }
+
+    &__register, &__login {
+        font-weight: 600;
+        &:hover {
+            background-color: transparent;
+            border: 1px solid #000;
+            color: #000;
+        }
+    }
 }

@@ -11,7 +11,7 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header lock-padding">
             <div class="header__container">
                 <a href="" class="header__logo">
                     <img src="img/shopiy.svg" alt="shopiy">
@@ -27,8 +27,10 @@
                             <li class="menu__item"><a data-goto=".service" href="#" class="menu__link">Service</a></li>
                             <li class="menu__item"><a data-goto=".contact" href="#" class="menu__link">Contact</a></li>
                             <li class="menu__item menu__buttons">
-                                <a href="#" class="menu__link menu__button button button_first">Sign in</a>
-                                <a href="#" class="menu__link menu__button button">Try Free</a>
+                                <a href="#popup-login"
+                                    class="menu__link menu__button button button_first popup-link">Sign
+                                    in</a>
+                                <a href="#try-free" class="menu__link menu__button button popup-link">Try Free</a>
                             </li>
                         </ul>
                     </nav>
@@ -78,7 +80,7 @@
                             </div>
                             <h3 class="progress-about__title">Make Progress</h3>
                             <div class="progress-about__subtitle">with opening plans</div>
-                            <a href="#" class="progress-about__button">Buy Plan</a>
+                            <a href="#try-free" class="progress-about__button popup-link">Buy Plan</a>
                         </div>
                     </div>
                 </div>
@@ -127,7 +129,8 @@
                     </div>
                     <div class="service__content">
                         <h3 class="service__suptitle suptitle" id="text-printing">SERVICES WE PROVIDES</h3>
-                        <h2 class="service__title title">Build on both: Google web stories and AMP website format</h2>
+                        <h2 class="service__title title _anim-items _anim-no-hide">Build on both: Google web stories and
+                            AMP website format</h2>
                         <div class="service__counter">
                             <div class="service__num service__num_1">
                                 <div data-digits-counter>5660</div>
@@ -146,7 +149,8 @@
                 <div class="do__container">
                     <div class="do__content">
                         <h3 class="do__suptitle suptitle" id="text-printing">WHAT WE DO</h3>
-                        <h2 class="do__title title">Our creative process for your business</h2>
+                        <h2 class="do__title title _anim-items _anim-no-hide">Our creative process for your business
+                        </h2>
                         <div class="do__text">As our motto, we always provide the best service especially for you and
                             your company by growing your company to be better.</div>
                     </div>
@@ -200,7 +204,7 @@
                     </div>
                     <div class="product__content">
                         <h3 class="product__suptitle suptitle" id="text-printing">OUR PRODUCT STORIES</h3>
-                        <h2 class="product__title title">Why product stories? Learn more</h2>
+                        <h2 class="product__title title _anim-items _anim-no-hide">Why product stories? Learn more</h2>
                         <div class="product__spollers">
                             <div class="product__item" data-spollers>
                                 <h4 data-spoller class="product__label">SEO optimized, high Google work</h4>
@@ -227,7 +231,8 @@
                 <div class="process__container">
                     <div class="process__content">
                         <h3 class="process__suptitle suptitle" id="text-printing">CREATIVE PROCESS</h3>
-                        <h2 class="process__title title">Know your ads inside & out-perform</h2>
+                        <h2 class="process__title title _anim-items _anim-no-hide">Know your ads inside & out-perform
+                        </h2>
                         <div class="process__text">Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
                             an unknown printer took a galley of type and scrambled it to make a type specimen book. It
@@ -260,7 +265,7 @@
             </section>
             <section class="contact">
                 <div class="contact__container">
-                    <h2 class="contact__title title">Contact with us.</h2>
+                    <h2 class="contact__title title _anim-items _anim-no-hide">Contact with us.</h2>
                     <div class="contact__text">More than 50,000+ companies trusted our business</div>
                     <form action="#" class="contact__form" id="form2">
                         <input required form="form2" type="text" class="contact__input"
@@ -286,7 +291,7 @@
                             <li class="menu2__item"><a data-goto=".contact" href="#" class="menu2__link">Contact</a>
                             </li>
                             <li class="menu2__item menu2__links">
-                                <a href="#" class="menu2__link">
+                                <a target="_blank" href="https://www.facebook.com/?locale=uk_UA" class="menu2__link">
                                     <svg width="11" height="21" viewBox="0 0 11 21" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -294,7 +299,7 @@
                                             fill="#868695" />
                                     </svg>
                                 </a>
-                                <a href="#" class="menu2__link">
+                                <a target="_blank" href="https://twitter.com/?lang=uk" class="menu2__link">
                                     <svg width="23" height="19" viewBox="0 0 23 19" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -302,7 +307,7 @@
                                             fill="#868695" />
                                     </svg>
                                 </a>
-                                <a href="#" class="menu2__link">
+                                <a target="_blank" href="https://www.instagram.com/" class="menu2__link">
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -310,7 +315,7 @@
                                             fill="#868695" />
                                     </svg>
                                 </a>
-                                <a href="#" class="menu2__link">
+                                <a target="_blank" href="https://ua.linkedin.com/" class="menu2__link">
                                     <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -329,8 +334,71 @@
             </div>
         </footer>
     </div>
+    <div id="popup-login" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#header" class="popup__close close-popup"></a>
+                <div class="popup__title">Sing in to your account</div>
+                <form id="login-form" action="#" class="popup__form">
+                    <input autocomplete="off" class="popup__email" type="email" required name="email"
+                        placeholder="User email">
+                    <input class="popup__password" type="password" name="password" minlength="6" required
+                        placeholder="Password (min 6 ch)">
+                    <a target="_blank"
+                        href="https://support.google.com/accounts/answer/41078?hl=en&co=GENIE.Platform%3DDesktop"
+                        class="popup__text">Forgot password?</a>
+                    <div class="popup__buttons">
+                        <button form="login-form" type="submit" class="button popup__button">Login</button>
+                        <a href="#popup-register" class="button popup__register popup-link close-popup">Register</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="popup-register" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#header" class="popup__close close-popup"></a>
+                <div class="popup__title">Create new account</div>
+                <form id="register-form" action="#" class="popup__form">
+                    <input autocomplete="off" class="popup__name" type="text" required name="name" placeholder="Name">
+                    <input autocomplete="off" class="popup__tel" type="tel" required name="tel"
+                        placeholder="Phone number" minlength="10" maxlength="10" pattern="[0-9]{10}">
+                    <input autocomplete="off" class="popup__email" type="email" required name="email"
+                        placeholder="User email">
+                    <input class="popup__password" type="password" name="password" minlength="6" required
+                        placeholder="Password (min 6 ch)">
+                    <div class="popup__buttons">
+                        <button form="register-form" type="submit" class="button popup__button">Register</button>
+                        <a href="#popup-login" class="button popup__login popup-link close-popup">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="try-free" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#header" class="popup__close close-popup"></a>
+                <div class="popup__title">Choose free plan or buy it for 10$</div>
+                <form id="try-free-form" action="#" class="popup__form">
+                    <input form="try-free-form" autocomplete="off" class="popup__email" required name="email"
+                        placeholder="Card number" type="cardnumber" id="clientInputCardnum" maxlength="19"
+                        minlength="19">
+                    <input form="try-free-form" class="popup__password" type="password" name="password" minlength="6"
+                        required placeholder="Password (min 6 ch)">
+                    <div class="popup__buttons">
+                        <button form="try-free-form" type="submit" class="button popup__button">Buy plan</button>
+                        <button form="try-free-form" class="button popup__button close-popup">Try free</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="js/script.js"></script>
     <script src="js/parallax-mouse.js"></script>
+    <script src="js/animation-scroll.js"></script>
+    <script src="js/popups.js"></script>
     <script src="js/counter.js"></script>
     <script src="js/accordeon.js"></script>
 </body>
