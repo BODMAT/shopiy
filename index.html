@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico">
     <title>Shopiy</title>
@@ -154,35 +155,54 @@
                         <div class="do__text">As our motto, we always provide the best service especially for you and
                             your company by growing your company to be better.</div>
                     </div>
-                    <div class="do__cards">
-                        <a href="" class="do__card do__card_1">
-                            <div class="do__img">
-                                <img src="img/do/Grow.svg" alt="grow">
+                    <div class="do__items">
+                        <div class="swiper-container">
+                            <!-- Additional required wrapper -->
+                            <div class="do__cards swiper-wrapper">
+                                <!-- Slides -->
+                                <a target="_blank"
+                                    href="https://www.wordstream.com/blog/ws/2014/08/14/increase-traffic-to-my-website"
+                                    class="swiper-slide do__card do__card_1 ">
+                                    <div class="do__img">
+                                        <img src="img/do/Grow.svg" alt="grow">
+                                    </div>
+                                    <h4 class="do__label">Grow your traffic</h4>
+                                    <div class="do__sublabel">We always help your company to grow with us.</div>
+                                </a>
+                                <a target="_blank" href="https://blog.hubspot.com/sales/sales-content"
+                                    class="swiper-slide do__card do__card_2">
+                                    <div class="do__img">
+                                        <img src="img/do/ales.svg" alt="ales">
+                                    </div>
+                                    <h4 class="do__label">Content for sales</h4>
+                                    <div class="do__sublabel">Every company that we handel. We always content more
+                                        sales.
+                                    </div>
+                                </a>
+                                <a target="_blank" href="https://www.qlik.com/us/reporting-analytics"
+                                    class="swiper-slide do__card do__card_3">
+                                    <div class="do__img">
+                                        <img src="img/do/Report.svg" alt="Report">
+                                    </div>
+                                    <h4 class="do__label">Reporting & analytics</h4>
+                                    <div class="do__sublabel">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
+                                </a>
+                                <a target="_blank"
+                                    href="https://blog.hubspot.com/marketing/how-to-increase-conversion-rate"
+                                    class="swiper-slide do__card do__card_4">
+                                    <div class="do__img">
+                                        <img src="img/do/Conversion.svg" alt="Conversion">
+                                    </div>
+                                    <h4 class="do__label">Better Conversion</h4>
+                                    <div class="do__sublabel">We always help your company to grow with us.</div>
+                                </a>
                             </div>
-                            <h4 class="do__label">Grow your traffic</h4>
-                            <div class="do__sublabel">We always help your company to grow with us.</div>
-                        </a>
-                        <a href="" class="do__card do__card_2">
-                            <div class="do__img">
-                                <img src="img/do/ales.svg" alt="ales">
-                            </div>
-                            <h4 class="do__label">Content for sales</h4>
-                            <div class="do__sublabel">Every company that we handel. We always content more sales.</div>
-                        </a>
-                        <a href="" class="do__card do__card_3">
-                            <div class="do__img">
-                                <img src="img/do/Report.svg" alt="Report">
-                            </div>
-                            <h4 class="do__label">Reporting & analytics</h4>
-                            <div class="do__sublabel">Lorem ipsum dolor sit amet, consectetur adipiscing</div>
-                        </a>
-                        <a href="" class="do__card do__card_4">
-                            <div class="do__img">
-                                <img src="img/do/Conversion.svg" alt="Conversion">
-                            </div>
-                            <h4 class="do__label">Better Conversion</h4>
-                            <div class="do__sublabel">We always help your company to grow with us.</div>
-                        </a>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+                        </div>
                     </div>
                 </div>
             </section>
@@ -395,6 +415,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/parallax-mouse.js"></script>
     <script src="js/animation-scroll.js"></script>

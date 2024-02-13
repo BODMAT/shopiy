@@ -909,22 +909,32 @@ body.lock {
         max-width: 461px;
     }
 
-    &__cards {
+    &__items {
         flex: 0 1 calc(50%-45px);
+        position: relative;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    &__cards {
         display: flex;
         flex-wrap: wrap;
         row-gap: 29px;
         column-gap: 22px;
+        @media (max-width: 767.98px) {
+            flex-wrap: nowrap;
+            row-gap: 0;
+            column-gap: 0;
+        }
     }
 
     &__card {
         flex: 0 1 calc(50% - 11px);
         padding: 23px;
         max-width: 272px;
-        display: flex;
-        flex-direction: column;
-        @media (max-width: 479.98px) {
-            flex: 1 1 100%;
+        @media (max-width: 767.98px) {
+            max-width: 100%;
+            min-width: 100%;
         }
 
         &_1 > .do__img {
@@ -946,6 +956,9 @@ body.lock {
             background-color: #1a1a3d;
             & > .do__img img {
                 transform: scale(1.2);
+            }
+            @media (max-width: 767.98px) {
+                background-color: transparent;
             }
         }
     }
@@ -980,6 +993,41 @@ body.lock {
         color: #868695;
     }
 }
+//================================================================================================
+.swiper-container{
+    max-width: 1000px;
+    box-sizing: content-box;
+    padding: 0px;
+    overflow: hidden; 
+    & *.swiper-button-next, *.swiper-button-prev{
+        display: none;
+    }
+    @media (max-width: 768px) {
+        padding: 0 50px ;
+        max-width: calc(100%);
+        & *.swiper-button-next, *.swiper-button-prev{
+            display: block;
+        }
+    }
+}
+
+.swiper-slide{
+    overflow: hidden;
+    @media (max-width: 767.98px) {
+        padding: 20px calc(12vw + 12px);
+    }
+}
+
+.features__swiper .swiper-button-prev::after, 
+.features__swiper .swiper-button-next::after { 
+    color:#0D0D2B;
+    font-size: 50px;
+}
+.swiper-button-prev, .swiper-button-next {
+    padding: 0;
+    z-index: 2;
+}
+
 
 //================================================================================================
 .product {

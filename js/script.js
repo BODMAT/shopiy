@@ -241,3 +241,99 @@ function getPatternedValue(string, pattern) {
 
     return newString;
 }
+
+
+//! Инициализируем Swiper
+const swiper = new Swiper('.swiper-container', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+
+    // Количество слайов для показа
+    slidesPerView: 1,
+    speed: 600,
+    // Отключение функционала
+    // ecлu слайдов меньше чем нужно 
+    watchOverflow: true,
+
+    // Omcmyn между слайдами
+    spaceBetween: 0,
+
+    // Бесконечный слайдер
+    //loop: true,
+});
+
+const mediaQuery = window.matchMedia('(max-width: 768.98px)');
+
+if (mediaQuery.matches) {
+    swiper.init();
+    console.log("init");
+
+} else {
+    swiper.destroy();
+    console.log("destroy");
+
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+
+        // Количество слайов для показа
+        slidesPerView: 1,
+        speed: 600,
+        // Отключение функционала
+        // ecлu слайдов меньше чем нужно 
+        watchOverflow: true,
+
+        // Omcmyn между слайдами
+        spaceBetween: 0,
+
+        // Бесконечный слайдер
+        //loop: true,
+    });
+    if (mediaQuery.matches) {
+        swiper.init();
+        console.log("init");
+
+    } else {
+        swiper.destroy();
+        console.log("destroy");
+
+    }
+    swiper.update()
+});
+mediaQuery.addEventListener("change", () => {
+    const swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+
+        // Количество слайов для показа
+        slidesPerView: 1,
+        speed: 600,
+        // Отключение функционала
+        // ecлu слайдов меньше чем нужно 
+        watchOverflow: true,
+
+        // Omcmyn между слайдами
+        spaceBetween: 0,
+
+        // Бесконечный слайдер
+        //loop: true,
+        initialSlide: 0,
+    });
+    if (mediaQuery.matches) {
+        swiper.init();
+        console.log("init");
+    } else {
+        swiper.destroy();
+        console.log("destroy1");
+    }
+    swiper.update()
+});
